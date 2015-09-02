@@ -5,7 +5,6 @@ app.controller("RedditController", ['$scope', 'HikeService', function ($scope, H
   })
   $scope.addPost = function () {
     $scope.post.date = new Date()
-    $scope.post.location = $scope.location
     $scope.post.comment = []
     $scope.post.votes = 0
     $scope.posts.push($scope.post);
