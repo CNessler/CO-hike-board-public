@@ -13,9 +13,11 @@ app.controller("RedditController", ['$scope', 'HikeService', function ($scope, H
 
   $scope.addVote = function (post) {
     post.votes += 1;
+    HikeService.upvote(post)
   }
   $scope.subtractVote = function (post) {
     post.votes -= 1;
+    HikeService.downvote(post)
   }
 
   $scope.addComment = function (post) {
