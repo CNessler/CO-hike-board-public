@@ -11,11 +11,11 @@ app.factory("HikeService", ['$http', function ($http) {
     update: function (comment) {
       $http.post('https://co-hike-board.herokuapp.com/api/comment', comment);
     },
-    upvote: function () {
-      $http.post('https://co-hike-board.herokuapp.com/api/upvote')
+    upvote: function (post) {
+      $http.post('https://co-hike-board.herokuapp.com/api/upvote', post)
     }
-    downvote: function () {
-      $http.post('https://co-hike-board.herokuapp.com/api/downvote')
+    downvote: function (post) {
+      $http.post('https://co-hike-board.herokuapp.com/api/downvote', post)
     }
   }
 }])
