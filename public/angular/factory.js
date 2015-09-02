@@ -13,7 +13,7 @@ app.factory("HikeService", ['$http', function ($http) {
     },
     upvote: function (post) {
       $http.post('https://co-hike-board.herokuapp.com/api/upvote', post)
-    }
+    },
     downvote: function (post) {
       $http.post('https://co-hike-board.herokuapp.com/api/downvote', post)
     }
