@@ -1,7 +1,7 @@
 app.controller("RedditController", ['$scope', 'HikeService', function ($scope, HikeService) {
   $scope.posts;
   HikeService.all().then(function (hikes) {
-    $scope.posts = hikes
+    $scope.posts = hikes.reverse()
   })
   $scope.addPost = function () {
     $scope.post.date = new Date()
